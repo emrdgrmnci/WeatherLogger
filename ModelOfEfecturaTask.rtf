@@ -1,0 +1,95 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2509
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 Menlo-Bold;}
+{\colortbl;\red255\green255\blue255;\red139\green120\blue164;\red32\green37\blue40;\red255\green255\blue255;
+\red244\green205\blue144;\red146\green161\blue177;\red93\green216\blue255;\red25\green191\blue6;\red65\green161\blue192;
+\red127\green205\blue136;\red214\green184\blue255;\red214\green184\blue255;}
+{\*\expandedcolortbl;;\csgenericrgb\c54349\c47013\c64433;\csgenericrgb\c12549\c14510\c15686;\csgenericrgb\c100000\c99997\c99999;
+\csgenericrgb\c95686\c80392\c56471;\csgenericrgb\c57255\c63137\c69412;\csgenericrgb\c36295\c84643\c99897;\csgenericrgb\c9854\c75004\c2334;\csgenericrgb\c25490\c63137\c75294;
+\csgenericrgb\c49804\c80392\c53333;\csgenericrgb\c83963\c72346\c99938\c45000;\csgenericrgb\c83963\c72346\c99938;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab494
+\pard\tx494\pardeftab494\pardirnatural\partightenfactor0
+
+\f0\fs20 \cf2 \cb3 //  Created by Ali Emre De\uc0\u287 irmenci on 23.10.2019.\cf4 \
+\cf2 //  Copyright \'a9 2019 Ali Emre De\uc0\u287 irmenci. All rights reserved.\cf4 \
+\cf2 //\cf4 \
+\cf5 import\cf4  Foundation\
+\
+\cf2 // MARK:
+\f1\b \cf6  - OpenWeather
+\f0\b0 \cf4 \
+\cf5 struct\cf4  \cf7 OpenWeather\cf4 : \cf8 Codable\cf4  \{\
+\cf2 //    let coord: Coord\cf4 \
+    \cf5 let\cf4  \cf9 weather\cf4 : [\cf10 Weather\cf4 ]\
+\cf2 //    let base: String\cf4 \
+    \cf5 let\cf4  \cf9 main\cf4 : \cf10 Main\cf4 \
+\cf2 //    let visibility: Int\cf4 \
+\cf2 //    let wind: Wind\cf4 \
+\cf2 //    let clouds: Clouds\cf4 \
+\cf2 //    let dt: Int?\cf4 \
+\cf2 //    let sys: Sys\cf4 \
+\cf2 //    let timezone: Int\cf4 \
+\cf2 //    let id: Int?\cf4 \
+    \cf5 let\cf4  \cf9 name\cf4 : \cf8 String\cf4 \
+\cf2 //    let cod: Int?\cf4 \
+\}\
+\
+\cf2 // MARK:
+\f1\b \cf6  - Clouds
+\f0\b0 \cf4 \
+\cf2 //struct Clouds: Codable \{\cf4 \
+\cf2 //    let all: Int\cf4 \
+\cf2 //\}\cf4 \
+\
+\cf2 // MARK:
+\f1\b \cf6  - Coord
+\f0\b0 \cf4 \
+\cf2 //struct Coord: Codable \{\cf4 \
+\cf11 ///\cf12 /    let lon, lat: Double\cf4 \
+\cf2 //\}\cf4 \
+\
+\cf2 // MARK:
+\f1\b \cf6  - Main
+\f0\b0 \cf4 \
+\cf5 struct\cf4  \cf7 Main\cf4 : \cf8 Codable\cf4  \{\
+    \cf5 let\cf4  \cf9 temp\cf4 : \cf8 Double\cf4 \
+\cf2 //    let pressure, humidity: Int\cf4 \
+\
+\
+\cf2 //    enum CodingKeys: String, CodingKey \{\cf4 \
+\cf2 //        case temp, pressure, humidity\cf4 \
+\cf2 //        case tempMin = "temp_min"\cf4 \
+\cf2 //        case tempMax = "temp_max"\cf4 \
+\cf2 //    \}\cf4 \
+\}\
+\
+\cf2 // MARK:
+\f1\b \cf6  - Sys
+\f0\b0 \cf4 \
+\cf2 //struct Sys: Codable \{\cf4 \
+\cf2 //    let type, id: Int\cf4 \
+\cf2 //    let country: String\cf4 \
+\cf2 //    let sunrise, sunset: Int\cf4 \
+\cf2 //\}\cf4 \
+\
+\cf2 // MARK:
+\f1\b \cf6  - Weather
+\f0\b0 \cf4 \
+\cf5 struct\cf4  \cf7 Weather\cf4 : \cf8 Codable\cf4  \{\
+\cf2 //    let id: Int?\cf4 \
+\cf2 //    let main: String?\cf4 \
+    \cf5 let\cf4  \cf9 description\cf4 : \cf8 String\cf4 \
+\cf2 //    let icon: String?\cf4 \
+\
+\cf2 //    enum CodingKeys: String, CodingKey \{\cf4 \
+\cf2 //        case id, main\cf4 \
+\cf2 //        case weatherDescription = "description"\cf4 \
+\cf2 //        case icon\cf4 \
+\cf2 //    \}\cf4 \
+\}\
+\cf2 //\cf4 \
+\cf11 ///\cf12 / MARK: - Wind\cf4 \
+\cf2 //struct Wind: Codable \{\cf4 \
+\cf2 //    let speed: Double\cf4 \
+\cf2 //    let deg: Int\cf4 \
+\cf2 //\}}
