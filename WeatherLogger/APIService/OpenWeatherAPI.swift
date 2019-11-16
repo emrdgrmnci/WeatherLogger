@@ -24,7 +24,8 @@ class NetworkService {
     public func getData(completion: @escaping(OpenWeather) -> () ) {
         //\(staticData.latitude)38.46 - 27.26
         locationValue = manager.location!.coordinate
-        guard let url = URL(string: "http://api.openweathermap.org/data/2.5/weather?lat=\(locationValue!.latitude)&lon=\(locationValue!.longitude)&APPID=61972804d615a47f23448ce031baecaa") else {return}
+//        let url = URL(string: "http://api.openweathermap.org/data/2.5/weather?lat=\(locationValue!.latitude)&lon=\(locationValue!.longitude)&APPID=61972804d615a47f23448ce031baecaa")
+        guard let url = URL(string: "http://api.openweathermap.org/data/2.5/weather?lat=38.46&lon=27.26&APPID=61972804d615a47f23448ce031baecaa") else {return}
         let session = URLSession.shared
         session.dataTask(with: url) { (data, response, error) in
             guard error == nil else {
